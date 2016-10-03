@@ -1,0 +1,49 @@
+.btn-default {
+  border: none!important;
+  font-weight: 700;
+  color: #000;
+  padding: 10px 20px;
+  background: #eee;
+  font-size: 14px;
+  @include transition(0.3s all ease-in-out);
+  box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.2);
+
+  &:hover {
+    background: $purple2;
+    color: #fff;
+  }
+}
+
+.btn-primary {
+  background: #000;
+  border-radius: 0;
+  border: 0;
+  outline: 0;
+  font-weight: 500;
+  padding: 5px 10px;
+  @include transition(0.3s all ease-in-out);
+
+  &:hover {
+    background: $purple2;
+    color: #fff;
+  }
+}
+
+.btn-share {
+  @include size(37px);
+  border: 1px solid #000;
+  background: #fff;
+  outline: none;
+  color: #000;
+  font-size: 16px;
+  display: inline-block;
+  text-align: center;
+  padding: 6px 10px 0;
+  @include transition(0.3s all ease-in-out);
+
+  &:hover {
+    background: $purple2;
+    color: #fff;
+    border: 1px solid $purple2;
+  }
+}

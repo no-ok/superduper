@@ -4,10 +4,10 @@
   overflow: hidden;
 
   &:hover {
-    .do-cont-text,
-    .do-cont-num {color: $purple;}
+    .oc-text,
+    .oc-num {color: $purple;}
 
-    .do-cont-num { border: 5px solid $purple;}
+    .oc-num { border: 5px solid $purple;}
   }
 
   img {
@@ -17,7 +17,7 @@
 
   .link-to {z-index: 10;}
 
-  .discount-overlay {
+  .overlay-cont {
     position: absolute;
     display: block;
     margin: 30px;
@@ -29,20 +29,20 @@
 
   }
 
-  .do-cont {
+  .ov-inner {
     position: absolute;
     left: 20px;
     bottom: 20px;
   }
 
-  .do-cont-text,
-  .do-cont-num {
+  .oc-text,
+  .oc-num {
     color: #fff;
     text-transform: uppercase;
     @include transition(0.3s all ease-in-out);
   }
 
-  .do-cont-text {
+  .oc-text {
     font-size: 36px;
     line-height: 1.1;
     font-weight: 400;
@@ -55,7 +55,7 @@
     }
   }
 
-  .do-cont-num {
+  .oc-num {
     display: inline-block;
     line-height: 1;
     margin: 0;
@@ -65,3 +65,115 @@
     font-weight: 500;
   }
 }
+
+.discounts-cont-top,
+.discounts-cont-bottom {
+  position: relative;
+  height: 195px;
+  overflow: hidden;
+  @include transition(0.4s all ease)
+
+  .overlay-cont {
+    position: absolute;
+    @include size(100%);
+    z-index: 5;
+  }
+
+  .link-to {z-index: 10;}
+}
+
+.discounts-cont-top {
+  background: #e8edf7;
+  margin-bottom: 30px;
+  padding: 20px;
+
+  &:hover,
+  &:focus {background: #fbf3f7;}
+
+  .img-block {
+    float: right;
+    width: 200px;
+    text-align: right;
+
+
+    img {
+      display: inline-block;
+      height: 155px;
+    }
+  }
+
+  .text-block {
+    padding-top: 20px;
+    margin-right: 230px;
+  }
+
+  .dc-title {
+    font-size: 36px;
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 1;
+
+    span {font-weight: 600;}
+  }
+
+  .dc-text {
+    font-size: 18px;
+    text-transform: uppercase;
+    margin: 0 0 10px;
+    line-height: 1;
+  }
+
+
+  .dc-num {
+    font-size: 36px;
+    color: $purple2;
+    font-weight: 600;
+    margin: 0;
+  }
+}
+
+.discounts-cont-bottom {
+  background: #fbf3f7;
+  padding: 20px;
+
+  &:hover,
+  &:focus {background: #e8edf7;}
+
+  .img-block {
+    float: left;
+    width: 250px;
+    overflow: hidden;
+
+    img {
+      display: inline-block;
+      height: 155px;
+    }
+  }
+
+  .text-block {
+    margin-left: 280px;
+    padding-top: 30px;
+    text-align:right;
+  }
+
+  .dc-title {
+    font-size: 32px;
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 1;
+    color: $purple2;
+
+    span {
+      font-weight: 600;
+      font-size: 40px;
+    }
+  }
+
+  .dc-text {
+    font-size: 18px;
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 1.5;
+  }
+}
+

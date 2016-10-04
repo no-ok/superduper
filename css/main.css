@@ -1124,70 +1124,18 @@ body {
   vertical-align: middle;
 }
 
-.wrap {
-  width: 320px;
-  border: 1px solid #ccc;
-  height: 480px;
-  overflow: auto;
-  position: relative;
-}
-
-.top-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 320px;
-  height: 60px;
-}
-
-.top-header .menu-icon {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 18px 20px;
-}
-
-.fix-search .top-header {
-  background: #eee;
-}
-
-.search {
-  position: absolute;
-  top: 155px;
-  left: 20px;
-  right: 20px;
-}
-
-.search input {
-  width: 265px;
-  border: 1px solid #ccc;
-  padding: 8px;
-  font-size: 15px;
-  transition: width 0.2s;
-  -webkit-appearance: none;
-}
-
-.fix-search .search {
-  position: fixed;
-  top: 10px;
-}
-
-.fix-search .search input {
-  width: 250px;
-}
-
 .discounts-cont {
   position: relative;
   height: 420px;
   overflow: hidden;
 }
 
-.discounts-cont:hover .do-cont-text,
-.discounts-cont:hover .do-cont-num {
+.discounts-cont:hover .oc-text,
+.discounts-cont:hover .oc-num {
   color: #BA68C8;
 }
 
-.discounts-cont:hover .do-cont-num {
+.discounts-cont:hover .oc-num {
   border: 5px solid #BA68C8;
 }
 
@@ -1200,7 +1148,7 @@ body {
   z-index: 10;
 }
 
-.discounts-cont .discount-overlay {
+.discounts-cont .overlay-cont {
   position: absolute;
   display: block;
   margin: 30px;
@@ -1211,14 +1159,14 @@ body {
   background: rgba(0, 0, 0, 0.6);
 }
 
-.discounts-cont .do-cont {
+.discounts-cont .ov-inner {
   position: absolute;
   left: 20px;
   bottom: 20px;
 }
 
-.discounts-cont .do-cont-text,
-.discounts-cont .do-cont-num {
+.discounts-cont .oc-text,
+.discounts-cont .oc-num {
   color: #fff;
   text-transform: uppercase;
   -webkit-transition: 0.3s all ease-in-out;
@@ -1226,20 +1174,20 @@ body {
   transition: 0.3s all ease-in-out;
 }
 
-.discounts-cont .do-cont-text {
+.discounts-cont .oc-text {
   font-size: 36px;
   line-height: 1.1;
   font-weight: 400;
   margin: 0;
 }
 
-.discounts-cont .do-cont-text span {
+.discounts-cont .oc-text span {
   font-size: 60px;
   display: block;
   font-weight: 600;
 }
 
-.discounts-cont .do-cont-num {
+.discounts-cont .oc-num {
   display: inline-block;
   line-height: 1;
   margin: 0;
@@ -1247,6 +1195,126 @@ body {
   border: 5px solid #fff;
   font-size: 50px;
   font-weight: 500;
+}
+
+.discounts-cont-top,
+.discounts-cont-bottom {
+  position: relative;
+  height: 195px;
+  overflow: hidden;
+  -webkit-transition: 0.4s all ease;
+  -moz-transition: 0.4s all ease;
+  transition: 0.4s all ease;
+}
+
+.discounts-cont-top .overlay-cont,
+.discounts-cont-bottom .overlay-cont {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 5;
+}
+
+.discounts-cont-top .link-to,
+.discounts-cont-bottom .link-to {
+  z-index: 10;
+}
+
+.discounts-cont-top {
+  background: #e8edf7;
+  margin-bottom: 30px;
+  padding: 20px;
+}
+
+.discounts-cont-top:hover, .discounts-cont-top:focus {
+  background: #fbf3f7;
+}
+
+.discounts-cont-top .img-block {
+  float: right;
+  width: 200px;
+  text-align: right;
+}
+
+.discounts-cont-top .img-block img {
+  display: inline-block;
+  height: 155px;
+}
+
+.discounts-cont-top .text-block {
+  padding-top: 20px;
+  margin-right: 230px;
+}
+
+.discounts-cont-top .dc-title {
+  font-size: 36px;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 1;
+}
+
+.discounts-cont-top .dc-title span {
+  font-weight: 600;
+}
+
+.discounts-cont-top .dc-text {
+  font-size: 18px;
+  text-transform: uppercase;
+  margin: 0 0 10px;
+  line-height: 1;
+}
+
+.discounts-cont-top .dc-num {
+  font-size: 36px;
+  color: #AB47BC;
+  font-weight: 600;
+  margin: 0;
+}
+
+.discounts-cont-bottom {
+  background: #fbf3f7;
+  padding: 20px;
+}
+
+.discounts-cont-bottom:hover, .discounts-cont-bottom:focus {
+  background: #e8edf7;
+}
+
+.discounts-cont-bottom .img-block {
+  float: left;
+  width: 250px;
+  overflow: hidden;
+}
+
+.discounts-cont-bottom .img-block img {
+  display: inline-block;
+  height: 155px;
+}
+
+.discounts-cont-bottom .text-block {
+  margin-left: 280px;
+  padding-top: 30px;
+  text-align: right;
+}
+
+.discounts-cont-bottom .dc-title {
+  font-size: 32px;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 1;
+  color: #AB47BC;
+}
+
+.discounts-cont-bottom .dc-title span {
+  font-weight: 600;
+  font-size: 40px;
+}
+
+.discounts-cont-bottom .dc-text {
+  font-size: 18px;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 1.5;
 }
 
 /*==========  Desktop First  ==========*/
